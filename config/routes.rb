@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#about'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'flights#index'
+  resources :airports, only: [:show, :index]
+  resources :flights, only: :index
 end

@@ -25,10 +25,4 @@ class FlightTest < ActiveSupport::TestCase
     assert_not @flight.valid?
   end
 
-  test 'the arrival_time is the sum of departure_time + duration' do
-    @flight.duration = 10
-    @flight.save
-    @flight.reload
-    assert_not_equal @flight.departure_time, @flight.arrival_time
-  end
 end

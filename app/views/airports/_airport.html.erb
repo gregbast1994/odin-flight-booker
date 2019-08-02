@@ -1,0 +1,8 @@
+<li class="list-group-item d-flex">
+    <%= airport.name %>
+    <span class="text-muted pl-1">(<%= airport.code %>)</span>
+    <div class="ml-auto">
+        <%= fa_icon('plane-arrival', text: airport.arriving.count) %>
+        <%= fa_icon('plane-departure', text: airport.departing.count) %>
+    </div>
+</li>
