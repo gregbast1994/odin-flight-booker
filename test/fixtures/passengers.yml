@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+greg:
+  name: greg
+  age: 25
+
+adina:
+  name: adina
+  age: 21
+
+gabe:
+  name: gabe
+  age: 2
+

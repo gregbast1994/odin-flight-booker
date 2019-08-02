@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+DET:
+  name: Detroit Airport
+  country: United States
+  code: USA
+
+CAN:
+  name: Montreal Airport
+  country: Canada
+  code: CAN
