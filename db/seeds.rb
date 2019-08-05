@@ -1,4 +1,4 @@
-10.times do
+5.times do
     code = Faker::Address.unique.country_code
     Airport.create!(name: Faker::App.unique.name + ' Airport',
                     code: code,
@@ -6,7 +6,9 @@
 end
 
 Airport.find_each do |from|
-    Airport.where.not(id: from.id).sample(5).each do |to|
-        from.book(to, Faker::Date.forward(20))
+    5.times do |day|
+        Airport.where.not(id: from.id).find_each do |to|
+            from.book(to, day.days.from_now)
+        end
     end
 end

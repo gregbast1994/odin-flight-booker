@@ -10,7 +10,7 @@ class Airport < ApplicationRecord
 
     def book(to, time)
         hours_in_flight = rand(24) + 1
-        departing << Flight.new(arrival_id: to.id, departure_time: time,
+        departing << Flight.new(arrival_id: to.id, departure_date: time,
                                 duration: hours_in_flight)
     end
 end

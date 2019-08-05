@@ -25,4 +25,10 @@ class FlightTest < ActiveSupport::TestCase
     assert_not @flight.valid?
   end
 
+  test 'the same route can happen day after day' do
+    @flight2 = @flight
+    @flight2.departure_date = 50.days.from_now
+    assert @flight2.valid?
+  end
+
 end

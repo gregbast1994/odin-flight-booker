@@ -1,0 +1,9 @@
+<%= form_for('', method: :get, 
+                 html: { class: 'form-inline' },
+                 enforce_utf8: false ) do |f| %>
+    From: <%= collection_select('', :from_code, @airports, :id, :code, selected: params[:from_code] ) %>
+    To: <%= collection_select('', :to_code, @airports, :id, :code, selected: params[:to_code] ) %>
+    When: <%= date_field '', :date %>
+    Tickets: <%= number_field '', :num_tickets %>
+    <%= f.submit 'Search', name: nil %>  
+<% end %>

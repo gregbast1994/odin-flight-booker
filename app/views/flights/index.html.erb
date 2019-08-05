@@ -1,3 +1,5 @@
-    From: <%= f.text_field :departure %>
-    To: <%= f.text_field :arrival %>
-    <%= f.submit 'Search', name: nil %>
+<div id="flights">
+    <% if @flights.any? %>
+        <%= render @flights %>
+    <% end%> 
+</div>
