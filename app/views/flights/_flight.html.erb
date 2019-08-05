@@ -1,4 +1,8 @@
-<div class="card p-2">
-    <p>From: <%= flight.departure.name %></p>
-    <p>To: <%= flight.arrival.name %></p>
-</div>
+<tr class="flight-<%= flight.id %>">
+    <td><%= flight.departure.country %></td>
+    <td><%= flight.arrival.country %></td>
+    <td><%= flight.departure_date %></td>
+    <td><%= flight.duration.to_s + ' hours' %></td>
+    <td>todo</td>
+    <td><button class="btn btn-success">Book</button></td>
+</tr>

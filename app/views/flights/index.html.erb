@@ -1,5 +1,13 @@
-<div id="flights">
+<table id="flights" class="table">
     <% if @flights.any? %>
+        <thead>
+            <td>From:</td>
+            <td>To:</td>
+            <td>Leaving at:</td>
+            <td>Flight time:</td>
+            <td>Occupancy:</td>
+            <td>Booking</td>
+        </thead>
         <%= render @flights %>
-    <% end%> 
+    <% end%>
 </div>
