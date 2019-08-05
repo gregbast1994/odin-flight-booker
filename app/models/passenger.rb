@@ -1,4 +1,4 @@
 class Passenger < ApplicationRecord
-    belongs_to :flight
+    has_many :bookings
     validates :name, :age, presence: true
 end
