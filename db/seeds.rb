@@ -1,8 +1,10 @@
+
 5.times do
     code = Faker::Address.unique.country_code
     Airport.create!(name: Faker::App.unique.name + ' Airport',
                     code: code,
                     country: Faker::Address.country_by_code(code: code) )
+
 end
 
 Airport.find_each do |from|

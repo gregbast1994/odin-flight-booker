@@ -1,0 +1,10 @@
+<%= form_for('',
+             url: new_booking_path,
+             method: :get,
+             enforce_utf8: false,
+             html: { id: 'booking_form' }) do |f| %>
+
+    <%= f.hidden_field(:flight, :value => flight.id) %>
+    <%= f.hidden_field(:num_tickets, :value => params[:num_tickets]) %>
+    <%= f.submit 'Book', class: 'btn btn-success', name: nil %> 
+<% end %>

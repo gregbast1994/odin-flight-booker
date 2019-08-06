@@ -23,11 +23,9 @@ ActiveRecord::Schema.define(version: 2019_08_05_030602) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "flight_id"
-    t.integer "passenger_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["flight_id"], name: "index_bookings_on_flight_id"
-    t.index ["passenger_id"], name: "index_bookings_on_passenger_id"
   end
 
   create_table "flights", force: :cascade do |t|
@@ -35,18 +33,18 @@ ActiveRecord::Schema.define(version: 2019_08_05_030602) do
     t.date "departure_date"
     t.integer "arrival_id"
     t.float "duration"
-    t.integer "passengers_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["departure_id", "arrival_id"], name: "index_flights_on_departure_id_and_arrival_id"
-    t.index ["passengers_id"], name: "index_flights_on_passengers_id"
   end
 
   create_table "passengers", force: :cascade do |t|
     t.string "name"
     t.integer "age"
+    t.integer "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_passengers_on_booking_id"
   end
 
 end
