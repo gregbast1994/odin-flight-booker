@@ -2,8 +2,6 @@
 
 one:
   flight: one
-  passenger: one
 
 two:
   flight: two
-  passenger: two

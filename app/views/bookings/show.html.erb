@@ -1,2 +1,14 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<div id="booking-<%= @booking.id %>">
+    <h1>Flight booking <%= @booking.id %></h1>
+    <p class="lead"><%= @booking.flight.description %></p>
+    <div class="row">
+        <div id="flight-details" class="col-12 col-sm-6">
+            <h4>Flight details</h4>
+             <%= render 'shared/booked_flight', flight: @booking.flight %>
+        </div>
+        <div id="passengers" class="col-12 col-sm-6">
+            <h4>Passengers</h4>
+            <%= render @passengers %>
+        </div>
+    </div>
+</div>

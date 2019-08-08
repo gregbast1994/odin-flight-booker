@@ -1,3 +1,17 @@
-<%= form_for @flight do |f| %>
-    
-<% end %>
+<div class="row">
+    <div class="col-12 col-sm-6">
+        <%= form_for @booking do |f| %>
+            <% @ticket_num.times do %>
+                <%= f.fields_for :passengers, @booking.passengers.build do |p| %>
+                    Name: <%= p.text_field :name, class: 'form-control' %> <br>
+                    Age: <%= p.number_field :age, class: 'form-control' %> <br>
+                <% end %>
+            <% end %>
+            <%= f.hidden_field(:flight_id, value: @booking.flight_id)%>
+            <%= f.submit %>
+        <% end %>
+    </div>
+    <div class="col">
+       <%= render 'shared/booked_flight', flight: @booking.flight %>
+    </div>
+</div>

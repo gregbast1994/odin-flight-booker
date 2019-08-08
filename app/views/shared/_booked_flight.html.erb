@@ -1,0 +1,20 @@
+<% if flight %>
+    <table class="flight-details">
+        <tr>
+            <th>From:</th>
+            <td><%= flight.departure.country %></td>
+        </tr>
+        <tr>
+            <th>To:</th>
+            <td><%= flight.arrival.country %></td>
+        </tr>
+        <tr>
+            <th>Leaving at:</th>
+            <td><%= flight.departure_date %></td>
+        </tr>
+        <tr>
+            <th>Price:</th>
+            <td><%= rand(200) + 50 %></td>
+        </tr>
+    </table>
+<% end %>
