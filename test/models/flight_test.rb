@@ -22,8 +22,9 @@ class FlightTest < ActiveSupport::TestCase
   end
 
   test 'the destination cannot be the departure' do
-    @flight.arrival = @flight.departure
-    assert_not @flight.valid?
+    @new_flight = Flight.new( departure: Airport.first, arrival: Airport.first,
+                              departure_date: Date.new, duration: 5)
+    assert_not @new_flight.valid?
   end
 
 end

@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @flight = Flight.find(params[:booking][:flight_id])
+    raise
     @booking = @flight.bookings.build(booking_params)
     if @booking&.save
        redirect_to @booking
