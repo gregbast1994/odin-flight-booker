@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between">
-    <%= Faker::Avatar.image(size: "50x50") %>
-    <p><%= passenger.name %>(<%= passenger.age)%>)
+<div class="d-flex align-items-end">
+    <%= image_tag(Faker::Avatar.image, size: "50", class: 'pr-2' ) %>
+    <p><%= passenger.name %>(<%= passenger.age%>)
 </div>

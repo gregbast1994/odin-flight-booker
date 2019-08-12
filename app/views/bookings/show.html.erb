@@ -7,7 +7,7 @@
              <%= render 'shared/booked_flight', flight: @booking.flight %>
         </div>
         <div id="passengers" class="col-12 col-sm-6">
-            <h4>Passengers</h4>
+            <h4>Passengers (<%= @passengers.count %>)</h4>
             <%= render @passengers %>
         </div>
     </div>

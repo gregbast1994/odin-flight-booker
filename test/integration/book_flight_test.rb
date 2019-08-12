@@ -18,7 +18,7 @@ class BookFlightTest < ActionDispatch::IntegrationTest
         params = { booking: { flight_id: @flight.id,
                               passengers_attributes: [ { name: 'greg', age: 21 },
                                                        { name: 'adina', age: 25} ] } }
-        post bookings_path(params[:booking])
+        post bookings_path( params )
       end
     end
     @booking = assigns(:booking)
